@@ -1,0 +1,35 @@
+---
+title: "README file for Getting and cleaning data project R script "
+author: "Ivan Lozo"
+date: "24. listopada 2015."
+output: html_document
+---
+
+##run_anylysis.R script description
+
+1. loads dplyr package
+2. reads feature names in new dataframe features from "features.txt"
+3. reads measurements training dataset in new dataframe x_train from "X_train.txt"
+3. reads activity training dataset in new dataframe  y_train from"y_train.txt"
+4. reads subject's ID training dataset in new dataframe subject_train
+5. assigning features names of x_train as column names
+6. renaming column name v1 of subject_train dataframe in Subject
+7. merging all trainig data in new dataframe called traindata
+
+8.reads measurements testing dataset in new dataframe x_test from "X_test.txt"
+9. reads activity training dataset in new dataframe  y_test from"y_test.txt"
+10. reads subject's ID testing dataset in new dataframe subject_test
+11 assigning features names of x_test as column names
+12. renaming column name v1 of subject_test dataframe in Subject
+13. merging all test data in new dataframe called testdata
+
+14. Merging training and tersting data in new dataframe called CompleteData
+15. reading activity labels from "activity_labels.txt" in new dataframe called activity_labels
+16. Joining data with activity labels on activity ID in order to get description of activity
+17. Creating vector of column numbers to extract (second, third column plus all the rest with "mean()" inside name)
+18. Creating new dataframe called CompleteDataMean containing only selected
+columns
+19. Creating new dataframe called AggregatedData with calculated means of all columns grouped by activity and subject
+20. Exporting final dataset to txt file
+
+

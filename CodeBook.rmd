@@ -1,5 +1,5 @@
 ---
-title: "CodeBook "
+title: "Getting and cleaning data course Codebook"
 author: "Ivan Lozo"
 date: "24. listopada 2015."
 output: html_document
@@ -11,39 +11,58 @@ This is a project of collecting and transforming data collected from the acceler
 
 ##Collection of the raw data
 
-Raw data was collected from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.
-ZIP file contains text files with data already partitioned on training and testing parts, separately for the mesurements, subjects and type of activity.
+Raw data was downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.
+ZIP file contains text files with data already partitioned on training and testing parts, separately for the measurements, subjects and type of activity.
 
 ##Creating the tidy datafile
-In order to create tidy dataset, training and testing datasets with measurements should be merged together. Before merging training and testing datasets they should be prepared separately by naming measurements columns with features and merging measurements data with data on activity and subject ID.
+In order to create tidy dataset, training and testing datasets with measurements were merged. Before merging training and testing datasets they were prepared separately by naming measurements columns with features and merging measurements data with data on activity and subject ID.
 
-After merging training and test dataset only measurements with the "mean()" were extracted in order to calcalate means grouped by activity and subject.
+After merging training and test dataset only columns with the "mean()" were extracted in order to calculate means grouped by activity and subject.
 
-Readme document with description:
+Readme document with description of R script is on the link:
 https://github.com/polip/GettingAndCleaningData/blob/master/README.md
 
-R script for preparation of tidy dataset:
-https://github.com/polip/GettingAndCleaningData
+R script created for preparation of tidy dataset:
+https://github.com/polip/GettingAndCleaningData/blob/master/run_analysis.R
 
 
-##Description of the variables in the tidy dataset
+##List of the variables in the final dataset
 
-test tes
+Final dataset contains 180 observations of 35 variables:
 
+Activity                   : Factor
+Subject_ID                 : int  
+tBodyAcc-mean()-X          : num  
+tBodyAcc-mean()-Y          : num  
+tBodyAcc-mean()-Z          : num  
+tGravityAcc-mean()-X       : num  
+tGravityAcc-mean()-Y       : num  
+tGravityAcc-mean()-Z       : num  
+tBodyAccJerk-mean()-X      : num  
+tBodyAccJerk-mean()-Y      : num  
+tBodyAccJerk-mean()-Z      : num  
+tBodyGyro-mean()-X         : num  
+tBodyGyro-mean()-Y         : num  
+tBodyGyro-mean()-Z         : num  
+tBodyGyroJerk-mean()-X     : num  
+tBodyGyroJerk-mean()-Y     : num  
+tBodyGyroJerk-mean()-Z     : num  
+tBodyAccMag-mean()         : num  
+tGravityAccMag-mean()      : num  
+tBodyAccJerkMag-mean()     : num  
+tBodyGyroMag-mean()        : num  
+tBodyGyroJerkMag-mean()    : num  
+fBodyAcc-mean()-X          : num  
+fBodyAcc-mean()-Y          : num  
+fBodyAcc-mean()-Z          : num  
+fBodyAccJerk-mean()-X      : num  
+fBodyAccJerk-mean()-Y      : num  
+fBodyAccJerk-mean()-Z      : num  
+fBodyGyro-mean()-X         : num  
+fBodyGyro-mean()-Y         : num  
+fBodyGyro-mean()-Z         : num  
+fBodyAccMag-mean()         : num  
+fBodyBodyAccJerkMag-mean() : num  
+fBodyBodyGyroMag-mean()    : num  
+fBodyBodyGyroJerkMag-mean(): num  
 
-
-```{r}
-tidydataset <- readRDS(file ="tidy_data_set.rds")
-str(tidydataset)
-summary(tidydataset)
-
-```
-
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-summary(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
