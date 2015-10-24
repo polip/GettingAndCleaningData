@@ -56,3 +56,6 @@ CompleteDataMean <- CompleteData[,colnumbers]
 AggregatedData <- CompleteDataMean%>%group_by(V2,Subject)%>%summarise_each(funs(mean))
 #renaming first 2 columns to be more descriptive
 AggregatedData <- AggregatedData%>%rename(Activity=V2,Subject_ID=Subject)
+
+#write txt file on disk
+write.table(x = AggregatedData,row.names = FALSE,file = "FinalTidyData.txt")
