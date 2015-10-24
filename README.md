@@ -2,7 +2,7 @@
 title: "README.md"
 author: "Ivan Lozo"
 date: "24. listopada 2015."
-output: word_document
+output: html_document
 ---
 
 This is an README file for Coursera Geting and cleaning data course project. <http://rmarkdown.rstudio.com>.
