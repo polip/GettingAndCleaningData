@@ -1,17 +1,39 @@
 ---
-title: "CodeBook.md"
+title: "CodeBook "
 author: "Ivan Lozo"
 date: "24. listopada 2015."
 output: html_document
 ---
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+##Project Description
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+This is a project of collecting and transforming data collected from the accelerometers from the Samsung Galaxy S smartphone for Coursera "Getting and cleaning data" course.
 
-```{r}
-summary(cars)
-```
+##Collection of the raw data
+
+Raw data was collected from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.
+ZIP file contains text files with data already partitioned on training and testing parts, separately for the mesurements, subjects and type of activity.
+
+##Creating the tidy datafile
+In order to create tidy dataset, training and testing datasets with measurements should be merged together. Before merging training and testing datasets they should be prepared separately by naming measurements columns with features and merging measurements data with data on activity and subject ID.
+
+After merging training and test dataset only measurements with the "mean()" were extracted in order to calcalate means grouped by activity and subject.
+
+Readme document with description:
+https://github.com/polip/GettingAndCleaningData/blob/master/README.md
+
+R script for preparation of tidy dataset:
+https://github.com/polip/GettingAndCleaningData
+
+
+##Description of the variables in the 
+
+
+
+`{r}
+summary(AggregatedData)
+
+`
 
 You can also embed plots, for example:
 
