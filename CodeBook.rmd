@@ -20,7 +20,7 @@ In order to create tidy dataset, training and testing datasets with measurements
 After merging training and test dataset only columns with the "mean()" were extracted in order to calculate means grouped by activity and subject.
 
 Readme document with description of R script is on the link:
-https://github.com/polip/GettingAndCleaningData/blob/master/README.md
+https://github.com/polip/GettingAndCleaningData/blob/master/README.rmd
 
 R script created for preparation of tidy dataset:
 https://github.com/polip/GettingAndCleaningData/blob/master/run_analysis.R
